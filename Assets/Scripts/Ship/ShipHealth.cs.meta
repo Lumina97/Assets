@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 55e596dbe357ef246a5c94a3ba7dccd1
+timeCreated: 1514923626
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - DeathEffectPrefab: {fileID: 114870337747873182, guid: 1480247c687826940928cfaceac1f9a1,
+      type: 2}
+  - DeathParticle: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
+  - DeathAudioClip: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

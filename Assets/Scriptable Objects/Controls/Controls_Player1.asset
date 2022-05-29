@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cadc6e555e47946947ea76ab766ae5, type: 3}
+  m_Name: Controls_Player1
+  m_EditorClassIdentifier: 
+  MoveForward: 119
+  TurnLeft: 97
+  TurnRight: 100
+  FireWeapon: 32
+  PauseGame: 27

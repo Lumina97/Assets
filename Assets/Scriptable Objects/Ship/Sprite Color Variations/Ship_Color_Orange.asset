@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7cf00d52e2f574db870b7c0bd2d53a, type: 3}
+  m_Name: Ship_Color_Orange
+  m_EditorClassIdentifier: 
+  ShipSprites:
+  - {fileID: 21300000, guid: 7cf70de13e193b7438db519a27c712c6, type: 3}
+  - {fileID: 21300000, guid: 8ea74c65387f5844889dd705dd561f30, type: 3}
+  - {fileID: 21300000, guid: 8d20006b6ef495148a1bf60f91fe282f, type: 3}
+  ShipLivesSprites:
+  - {fileID: 21300000, guid: 878f27cd0088be149bb1ea6719c55778, type: 3}
+  - {fileID: 21300000, guid: 8f32a422d2038cd48bed6292d8060963, type: 3}
+  - {fileID: 21300000, guid: 6375a59ad3805034e9a513e3794daf4d, type: 3}
+  BackGroundSprites: {fileID: 21300000, guid: eefa9a30a6f7c244f964de09643f9624, type: 3}
+  BoosterColors: {r: 1, g: 0.8000001, b: 0, a: 1}
+  DeathParticles: {fileID: 165920, guid: 9d17a92b0b8b22f438084097b870e05a, type: 2}
+  VariationPos: 2

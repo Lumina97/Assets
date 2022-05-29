@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: ce0bd67036ed8e14fb0df1e7c5799f68
+timeCreated: 1514986222
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Gunpoint: {instanceID: 0}
+  - DefaultPrimaryWeaponType: {fileID: 11400000, guid: b8b768e6870b35547b2401b3a6433e7c,
+      type: 2}
+  - OnHitEffect: {fileID: 11400000, guid: cda7568e8b97c0747833bb0fb46afc42, type: 2}
+  - CurrentMissile: {fileID: 114140353228256826, guid: 164abe5c5fda23f44872fbe570372745,
+      type: 2}
+  - AudioSrc: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
