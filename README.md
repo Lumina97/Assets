@@ -1,4 +1,4 @@
-#Space Trace
+# Space Trace
 
 This is a small asteroids clone developed in Unity and built for WebGL. It features customizable ships, enemies and power ups.
 
