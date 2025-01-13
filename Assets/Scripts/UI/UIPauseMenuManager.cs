@@ -9,9 +9,6 @@ public class UIPauseMenuManager : MonoBehaviour
     public GameObject GameOverObject;
 
     private GameManager _gameManager;
-    private bool _paused;
-    private bool _isMobile;
-    private MobileControlsManager _mobileControls;
 
     private void OnEnable()
     {
@@ -24,31 +21,15 @@ public class UIPauseMenuManager : MonoBehaviour
     void Awake()
     {
         _gameManager = GameManager.Instance;
-        if (_gameManager)
-        {
-            _gameManager.OnGameOver += OnGameOver;
-        }
+        _gameManager.OnGameOver += OnGameOver;
 
-        //Check if we are running on windows or mobile
-        if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer)
-        {
-            _isMobile = true;
-            if (MobileControlsManager.Instance != null)
-            {
-                _mobileControls = MobileControlsManager.Instance;
-            }
-        }
-        else if (Application.platform == RuntimePlatform.WindowsPlayer)
-        {
-            _isMobile = false;
-        }
     }
 
     void Update()
     {
         if (_gameManager)
         {
-            if (Input.GetKeyDown(KeyCode.Escape) || CrossPlatformInputManager.GetButton("Pause"))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 switch (_gameManager.GameState)
                 {
@@ -56,31 +37,14 @@ public class UIPauseMenuManager : MonoBehaviour
                         _gameManager.PauseGame();
                         SetObjectActiveState(PauseMenuObject, true);
                         SetObjectActiveState(HUDObject, false);
-
-                        if (_isMobile && _mobileControls != null)
-                        {
-                            _mobileControls.gameObject.SetActive(false);
-                        }
-                        else if (_isMobile == false)
-                        {
-                            MouseManager.ToggleMouseLock(false);
-                        }
-
+                        MouseManager.ToggleMouseLock(false);
                         break;
+
                     case EGameState.paused:
                         _gameManager.ResumeGame();
                         SetObjectActiveState(PauseMenuObject, false);
                         SetObjectActiveState(HUDObject, true);
-
-                        if (_isMobile && _mobileControls != null)
-                        {
-                            _mobileControls.gameObject.SetActive(true);
-                        }
-                        else if (_isMobile == false)
-                        {
-                            MouseManager.ToggleMouseLock(true);
-                        }
-
+                        MouseManager.ToggleMouseLock(true);
                         break;
                 }
             }
@@ -89,10 +53,8 @@ public class UIPauseMenuManager : MonoBehaviour
 
     public void ResumeGame()
     {
-        if (_isMobile == false)
-        {
-            MouseManager.ToggleMouseLock(true);
-        }
+
+        MouseManager.ToggleMouseLock(true);
         SetObjectActiveState(PauseMenuObject, false);
         SetObjectActiveState(HUDObject, true);
         _gameManager.ResumeGame();

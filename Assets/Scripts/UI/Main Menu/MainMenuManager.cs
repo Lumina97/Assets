@@ -56,7 +56,15 @@ public class MainMenuManager : MonoBehaviour
         if (SettingsHelper.Instance)
             SettingsHelper.Instance.SaveAudioSettings();
 
+        CallExternalFunction("onUnityQuit");
         Application.Quit();
+    }
+
+    private void CallExternalFunction(string functionName)
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR        
+        Application.ExternalEval($"{functionName}();");
+#endif
     }
 
     public void OpenSettings()

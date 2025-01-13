@@ -61,6 +61,6 @@ public class Missile_Base : PoolingItemBase
     protected void Update()
     {
         //update movement
-        r_body.velocity = Movement();
+        r_body.linearVelocity = Movement();
     }
 }

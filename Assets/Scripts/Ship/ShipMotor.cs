@@ -69,7 +69,7 @@ public class ShipMotor : MonoBehaviour
         if (_forwardInput > 0f)
             UseBooster();
 
-        if (_lastVelocity >= ExplosionVelocityThreshhold && Vector2.SqrMagnitude(r_Body.velocity) <= (_lastVelocity / 1.5f))
+        if (_lastVelocity >= ExplosionVelocityThreshhold && Vector2.SqrMagnitude(r_Body.linearVelocity) <= (_lastVelocity / 1.5f))
         {
             if (OnFatalVelocityChange != null)
                 OnFatalVelocityChange();
@@ -142,7 +142,7 @@ public class ShipMotor : MonoBehaviour
             // and leave function
             return;
         }
-        _lastVelocity = Vector2.SqrMagnitude(r_Body.velocity);
+        _lastVelocity = Vector2.SqrMagnitude(r_Body.linearVelocity);
 
         movementVec = (transform.rotation * Vector2.up) * _forwardInput * MovementData.AccellerationSpeed;
         r_Body.AddForce(movementVec);
